@@ -27,10 +27,14 @@ html(lang="en")
 		link(rel="stylesheet" href="css/main.min.css?"+hashcss)
 	body
 		header
-			h1
-				|Noto Color Emoji
-			=" "
-			span.output
+			div.header-block.title
+				a.github-page(href="https://projectsoft-studionions.github.io/")
+				h1
+					|Noto Color Emoji
+				=" "
+				span.output
+				a.github-repo(href="https://github.com/ProjectSoft-STUDIONIONS/noto-color-emoji" target="_blank" title="GitHub Repositore")
+					include ../images/github.svg
 		main
 			div.emoji
 				div.emoji-header
@@ -42,6 +46,7 @@ html(lang="en")
 							each icon in block.icons
 								div.emoji-main-block-icon
 									button.emoji-main-block-icon-button(type="button" title=icon.title)!= icon.value
-		footer
-			|Footer
+		footer.text-right
+			a(href="https://github.com/ProjectSoft-STUDIONIONS" target="_blank") ProjectSoft
+			|&nbsp;© 2008 - All rights reserved
 		script(src="js/main.min.js?"+hashjs)

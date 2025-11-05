@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="ru")
 	head
 		title
 			|Noto Color Emoji
@@ -45,7 +45,7 @@ html(lang="en")
 						div(class="emoji-main-block" + (block.id == 'smiles' ? ' active' : '') data-id=block.id)
 							each icon in block.icons
 								div.emoji-main-block-icon
-									button.emoji-main-block-icon-button(type="button" title=icon.title)!= icon.value
+									button.emoji-main-block-icon-button(type="button" title!=icon.title)!= icon.value
 		footer.text-right
 			a(href="https://github.com/ProjectSoft-STUDIONIONS" target="_blank") ProjectSoft
 			|&nbsp;© 2008 - All rights reserved

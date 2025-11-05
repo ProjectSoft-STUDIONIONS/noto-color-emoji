@@ -12,9 +12,11 @@ indent_style = space
 tab_width = 2
 
 [**.pug]
+end_of_line = lf
 tab_width = 2
 
 [**.html]
+end_of_line = lf
 tab_width = 2
 
 [**.js]
@@ -30,6 +32,34 @@ end_of_line = lf
 tab_width = 4
 
 [**.json]
+end_of_line = lf
+tab_width = 4
+
+[*.yml]
+indent_style = space
+tab_width = 2
+
+[*.pug]
+end_of_line = lf
+tab_width = 2
+
+[*.html]
+end_of_line = lf
+tab_width = 2
+
+[*.js]
+end_of_line = lf
+tab_width = 4
+
+[*.less]
+end_of_line = lf
+tab_width = 4
+
+[*.css]
+end_of_line = lf
+tab_width = 4
+
+[*.json]
 end_of_line = lf
 tab_width = 4
 

@@ -106,8 +106,8 @@ module.exports = function(grunt) {
 				options: {
 					doctype: 'html',
 					client: false,
-					pretty: '\t',
-					separator:  '\n',
+					pretty: '',//'\t',
+					separator: '',//'\n',
 					data: function(dest, src) {
 						return {
 							data: require(__dirname + '/src/pug/emoji.json'),

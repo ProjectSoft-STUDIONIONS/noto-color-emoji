@@ -1,0 +1,22 @@
+{
+  "name": "noto-color-emoji",
+  "description": "Шрифт Noto Color Emoji",
+  "main": "Gruntfile.js",
+  "authors": [
+    "ProjectSoft <projectsoft2009@yandex.ru>"
+  ],
+  "license": "OFL-1.1",
+  "keywords": [
+    "notocoloremoji",
+    "emoji",
+    "font"
+  ],
+  "homepage": "https://github.com/ProjectSoft-STUDIONIONS/noto-color-emoji",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

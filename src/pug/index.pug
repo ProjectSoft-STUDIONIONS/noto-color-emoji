@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+	head
+		title
+			|Noto Color Emoji
+		meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=EmulateIE9")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(name="cmsmagazine" content="d8e7426ec72ad3e4ea38b09ebf01284")
+		meta(charset="utf-8")
+		meta(name="yandex-verification" content="ad6b0f0f478e9f72")
+		meta(name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+		meta(name="color-scheme" content="only light")
+		meta(name="theme-color" content="#ffffff")
+		meta(name="title" content="Noto Color Emoji")
+		meta(name="description" content="Шрифт Noto Color Emoji")
+		meta(name="keywords" content="emoji,icons")
+		meta(name="author" content="ProjectSoft")
+		meta(name="og:url" content="")
+		meta(property="og:type" content="website")
+		meta(name="og:title" content="Noto Color Emoji")
+		meta(name="og:description" content="Шрифт Noto Color Emoji")
+		meta(name="twitter:card" content="summary_large_image")
+		link(rel="icon" type="image/png" href="/favicon.png" sizes="256x256")
+		link(rel="shortcut icon" href="/favicon.ico")
+		meta(name="apple-mobile-web-app-title" content="Noto Color Emoji")
+		link(rel="stylesheet" href="css/main.min.css?"+hashcss)
+	body
+		header
+			h1
+				|Noto Color Emoji
+			=" "
+			span.output
+		main
+			div.emoji
+				div.emoji-header
+					each block in data
+						div(class="emoji-header-title" + (block.id == 'smiles' ? ' active' : '') data-id=block.id)= block.title
+				div.emoji-main
+					each block in data
+						div(class="emoji-main-block" + (block.id == 'smiles' ? ' active' : '') data-id=block.id)
+							each icon in block.icons
+								div.emoji-main-block-icon
+									button.emoji-main-block-icon-button(type="button" title=icon.title)!= icon.value
+		footer
+			|Footer
+		script(src="js/main.min.js?"+hashjs)

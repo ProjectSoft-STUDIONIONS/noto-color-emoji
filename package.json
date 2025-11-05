@@ -1,0 +1,46 @@
+{
+	"name": "noto-color-emoji",
+	"version": "1.0.0",
+	"description": "Шрифт Noto Color Emoji",
+	"keywords": [
+		"notocoloremoji",
+		"emoji",
+		"font"
+	],
+	"homepage": "https://github.com/ProjectSoft-STUDIONIONS/noto-color-emoji#readme",
+	"bugs": {
+		"url": "https://github.com/ProjectSoft-STUDIONIONS/noto-color-emoji/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ProjectSoft-STUDIONIONS/noto-color-emoji.git"
+	},
+	"license": "OFL-1.1",
+	"author": "",
+	"type": "commonjs",
+	"main": "Gruntfile.js",
+	"directories": {
+		"doc": "docs"
+	},
+	"scripts": {
+		"inst": "npm install && bower install",
+		"preinstall": "npm i -g less pug-cli",
+		"build": "grunt -v"
+	},
+	"dependencies": {
+		"crypto-js": "^4.2.0",
+		"grunt": "^1.6.1",
+		"grunt-autoprefixer": "^3.0.4",
+		"grunt-contrib-clean": "^2.0.1",
+		"grunt-contrib-concat": "2.1.0",
+		"grunt-contrib-connect": "^5.0.1",
+		"grunt-contrib-copy": "^1.0.0",
+		"grunt-contrib-cssmin": "^4.0.0",
+		"grunt-contrib-less": "^3.0.0",
+		"grunt-contrib-pug": "^3.0.0",
+		"grunt-contrib-uglify-es": "3.3.0",
+		"grunt-contrib-watch": "^1.1.0",
+		"load-grunt-tasks": "^5.1.0",
+		"time-grunt": "git+https://github.com/ProjectSoft-STUDIONIONS/time-grunt.git"
+	}
+}

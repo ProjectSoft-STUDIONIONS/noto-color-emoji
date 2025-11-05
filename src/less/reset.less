@@ -1,0 +1,59 @@
+
+body {
+	--google-font-color-notocoloremoji: colrv1;
+	font-family: 'Calibri', 'Noto Color Emoji', sans-serif;
+}
+
+// Кнопка
+input,
+button {
+	&,
+	&[type=button],
+	&[type=file],
+	&[type=reset],
+	&[type=submit] {
+		font-family: 'Calibri', 'Noto Color Emoji', sans-serif;
+	}
+}
+
+// Текстовые
+input {
+	&[type=date],
+	&[type=datetime],
+	&[type=datetime-local],
+	&[type=email],
+	&[type=month],
+	&[type=number],
+	&[type=password],
+	&[type=search],
+	&[type=tel],
+	&[type=text],
+	&[type=time],
+	&[type=url],
+	&[type=week] {
+		font-family: 'Calibri', 'Noto Color Emoji', sans-serif;
+	}
+}
+
+// Многострочный текст
+textarea {
+	font-family: 'Calibri', 'Noto Color Emoji', sans-serif;
+}
+
+// Список
+select {
+	&,
+	optgroup,
+	option {
+		font-family: 'Calibri', 'Noto Color Emoji', sans-serif;
+	}
+}
+
+.CodeMirror,
+pre,
+code {
+	&,
+	span {
+		font-family: monospace, Consolas, 'Courier New', 'Courier', 'Noto Color Emoji', sans-serif;
+	}
+}

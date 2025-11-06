@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 					ieCompat: false,
 					plugins: [],
 					modifyVars: {
-						fontpath: "../fonts"
+						fontpath: "fonts"
 					},
 				},
 				files : {

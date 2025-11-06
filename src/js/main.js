@@ -1,9 +1,10 @@
 (function(){
-	let timer;
+	let timer, tab;
 	const tabs = [...document.querySelectorAll(".emoji-header-title")],
 		blocks = [...document.querySelectorAll(".emoji-main-block")],
 		buttons = [...document.querySelectorAll(".emoji-main-block-icon-button")],
 		output = document.querySelector('.output'),
+		hashes = [],
 		restartTimer = () => {
 			clearTimeout(timer);
 			!output.classList.contains('active') && output.classList.add('active');
@@ -31,6 +32,7 @@
 				actives.forEach((el) => {
 					el.classList.add('active');
 				});
+				document.location.hash = id;
 			}
 			return !1;
 		},
@@ -57,12 +59,27 @@
 					restartTimer();
 				});
 			}
+		},
+		historyChange = (e) => {
+			if(e){
+				e.preventDefault();
+			}
+			if(document.location.hash == "" || !hashes.includes(document.location.hash)) {
+				document.location.hash = "smiles";
+			}
+			if(tab = document.querySelector('.emoji-header-title[data-id="' + document.location.hash.replace(/#/, '') + '"]')){
+				tab.click();
+			}
+			return !1;
 		};
-
 	tabs.forEach((tab) => {
+		let id = tab.getAttribute('data-id');
+		hashes.push(`#${id}`);
 		tab.addEventListener('click', listenerTab);
 	});
 	buttons.forEach((button) => {
 		button.addEventListener('click', listenerCopy);
-	})
+	});
+	window.addEventListener('hashchange', historyChange);
+	historyChange();
 }());

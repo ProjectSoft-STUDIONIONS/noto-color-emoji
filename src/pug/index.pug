@@ -16,19 +16,6 @@ html(lang="ru")
 		meta(name="description" content="Шрифт Noto Color Emoji")
 		meta(name="keywords" content="emoji,icons")
 		meta(name="author" content="ProjectSoft")
-		link(rel="preload" href="fonts/noto-color-emoji.0.woff2" as="font")
-		link(rel="preload" href="fonts/noto-color-emoji.1.woff2" as="font")
-		link(rel="preload" href="fonts/noto-color-emoji.2.woff2" as="font")
-		link(rel="preload" href="fonts/noto-color-emoji.3.woff2" as="font")
-		link(rel="preload" href="fonts/noto-color-emoji.4.woff2" as="font")
-		link(rel="preload" href="fonts/noto-color-emoji.5.woff2" as="font")
-		link(rel="preload" href="fonts/noto-color-emoji.6.woff2" as="font")
-		link(rel="preload" href="fonts/noto-color-emoji.7.woff2" as="font")
-		link(rel="preload" href="fonts/noto-color-emoji.8.woff2" as="font")
-		link(rel="preload" href="fonts/noto-color-emoji.9.woff2" as="font")
-		link(rel="preload" href="fonts/noto-color-emoji.10.woff2" as="font")
-		link(rel="preload" href="fonts/noto-color-emoji.11.woff2" as="font")
-		link(rel="preload" href="fonts/noto-color-emoji.12.woff2" as="font")
 		meta(name="og:url" content="")
 		meta(property="og:type" content="website")
 		meta(name="og:title" content="Noto Color Emoji")
@@ -37,7 +24,8 @@ html(lang="ru")
 		link(rel="icon" type="image/png" href="/favicon.png" sizes="256x256")
 		link(rel="shortcut icon" href="/favicon.ico")
 		meta(name="apple-mobile-web-app-title" content="Noto Color Emoji")
-		link(rel="stylesheet" href="css/main.min.css?"+hashcss)
+		style(type="text/css")
+			include ../build/main.min.css
 	body
 		header
 			div.header-block.title
@@ -52,14 +40,15 @@ html(lang="ru")
 			div.emoji
 				div.emoji-header
 					each block in data
-						div(class="emoji-header-title" + (block.id == 'smiles' ? ' active' : '') data-id=block.id)= block.title
+						div(class="emoji-header-title" data-id=block.id)= block.title
 				div.emoji-main
 					each block in data
-						div(class="emoji-main-block" + (block.id == 'smiles' ? ' active' : '') data-id=block.id)
+						div(class="emoji-main-block" data-id=block.id)
 							each icon in block.icons
 								div.emoji-main-block-icon
 									button.emoji-main-block-icon-button(type="button" title!=icon.title)!= icon.value
 		footer.text-right
 			a(href="https://github.com/ProjectSoft-STUDIONIONS" target="_blank") ProjectSoft
 			|&nbsp;© 2008 - All rights reserved
-		script(src="js/main.min.js?"+hashjs)
+		script(type="application/javascript")
+			include ../build/main.min.js

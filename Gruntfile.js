@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 					},
 				},
 				files : {
-					'docs/css/main.css' : [
+					'src/build/main.css' : [
 						'src/less/main.less'
 					],
 				}
@@ -37,8 +37,8 @@ module.exports = function(grunt) {
 			},
 			main: {
 				files: {
-					'docs/css/main.css' : [
-						'docs/css/main.css'
+					'src/build/main.css' : [
+						'src/build/main.css'
 					],
 				}
 			}
@@ -50,8 +50,8 @@ module.exports = function(grunt) {
 			},
 			main: {
 				files: {
-					'docs/css/main.min.css' : [
-						'docs/css/main.css'
+					'src/build/main.min.css' : [
+						'src/build/main.css'
 					],
 				}
 			}
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
 						src: [
 							'src/js/main.js'
 						],
-						dest: 'docs/js',
+						dest: 'src/build',
 						filter: 'isFile',
 						rename: function (dst, src) {
 							return dst + '/' + src.replace('.js', '.min.js');
@@ -92,12 +92,6 @@ module.exports = function(grunt) {
 						src: ['*.*'],
 						dest: 'docs/fonts/',
 					},
-					{
-						expand: true,
-						cwd: 'src/js',
-						src: ['*.*'],
-						dest: 'docs/js/',
-					},
 				]
 			}
 		},
@@ -111,8 +105,8 @@ module.exports = function(grunt) {
 					data: function(dest, src) {
 						return {
 							data: require(__dirname + '/src/pug/emoji.json'),
-							hashcss: SHA(__dirname + '/docs/css/main.min.css'),
-							hashjs: SHA(__dirname + '/docs/js/main.min.js'),
+							hashcss: SHA(__dirname + '/src/build/main.min.css'),
+							hashjs: SHA(__dirname + '/src/build/main.min.js'),
 						}
 					}
 				},
@@ -146,7 +140,7 @@ module.exports = function(grunt) {
 			main: {
 				options: {
 					hostname: "localhost",
-					port: 9001,
+					port: 8000,
 					base: 'docs'
 				}
 			}
